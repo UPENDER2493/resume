@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0a9ce0c2;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    border-radius: 5px;
+    border-color: #ff0000;
+}
+
+header .container {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.skills-container, .projects-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-card, .project-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 22%;
+}
+
+.skill-card h3, .project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-card button:hover {
+    background-color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>UPENDER</h1>
+            <p>B.Tech Computer Science Student in Artificial Intelligence And Robotics</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="./login.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I am UPENDER, a passionate B.Tech Computer Science student. I am currently exploring the world of software development, web development, and AI.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>HTML, CSS, JAVASCRIPT, C</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JAVASCRIPT, C</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git HUB, VS Code,</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A Simple Calculator using html,css,javascript</p>
+                    <button onclick="viewProject('https://github.com/username/project1')">View Project</button>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>A digital clock show exact time with counts using html,css,javascript</p>
+                    <button onclick="viewProject('https://github.com/username/project2')">View Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <h3>B.Tech In Artificial Intelligence And Robotics</h3>
+                    <p>WORLD COLLEGE OF TECHNOLOGY AND MANAGEMENT</p>
+                </li>
+                <li>
+                    <h3>Higher Secondary Education</h3>
+                    <p>Rose Land Public School 2021-2023</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 UPENDER</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open project URL in a new tab
+function viewProject(url) {
+    window.open(url, '_blank');
+}
+
+// Form submission logic (optional)
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert('Message sent successfully!');
+        document.getElementById('contact-form').reset();
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+
+    </script>
+</body>
+</html>
